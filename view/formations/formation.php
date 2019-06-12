@@ -11,19 +11,24 @@
 
     <div>
         <span>Formation :</span>
-        <?php echo $contact->nomFormation;?>
+        <?php echo $contact->nomFormation; ?>
     </div>
     <div>
         <span>Date :</span>
-        <?php echo $contact->date;?>
+        <?php echo $contact->date; ?>
     </div>
     <div>
         <span>Poste :</span>
-        <?php echo $contact->poste;?>
+        <?php echo $contact->poste; ?>
     </div>
     <div>
         <span>Ville :</span>
-        <?php echo $contact->ville;?>
+        <?php echo $contact->ville; ?>
+    </div>
+
+    <div>
+        <span>Ville :</span>
+        <?php echo $contact->description; ?>
     </div>
     
 </body>

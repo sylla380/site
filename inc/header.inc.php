@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Creative CV</title>
     <meta name="description" content="Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skils and experience."/>
-    <link href="view/css/style.css" rel="stylesheet">
-    <link href="view/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="view/css/aos.css" rel="stylesheet">
-    <link href="view/styles/main.css" rel="stylesheet">
+    <link href="public/css/aos.css" rel="stylesheet">
+    <link href="public/styles/main.css" rel="stylesheet">
 </head>
 <body id="top">
     <header>

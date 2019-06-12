@@ -10,7 +10,7 @@
 <body>
     <form action="" method="post">
         <label for="nomFormation">Formation :</label>
-        <input type="text" name ="nomFormation" id="nomFormation"><br><br>
+        <input type="text" name="nomFormation" id="nomFormation"><br><br>
         
         <label for= "date">Date :</label>
         <input type="text" name="date" id="date"><br><br>
@@ -20,6 +20,9 @@
 
         <label for="ville">Ville :</label>
         <input type="text" name="ville" id="ville"><br><br>
+
+        <label for="description">description :</label>
+        <input type="text" name="description" id="description"><br><br>
 
         <input type="submit" value="Ajouter">
 

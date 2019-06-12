@@ -155,7 +155,7 @@ if(isset($_POST['email']) and isset($_POST['sujet']) and isset($_POST['message']
 else{
 ?>
 <div class="section" id="contact">
-  <div class="cc-contact-information" style="background-image: url('view/images/staticmap.png');">
+  <div class="cc-contact-information" style="background-image: url('public/images/staticmap.png');">
     <div class="container">
       <div class="cc-contact">
         <div class="row">
@@ -232,11 +232,11 @@ else{
         <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
       </div>
     </footer>
-    <script src="view/js/core/jquery.3.2.1.min.js"></script>
-    <script src="view/js/core/popper.min.js"></script>
-    <script src="view/js/core/bootstrap.min.js"></script>
-    <script src="view/js/now-ui-kit.js?v=1.1.0"></script>
-    <script src="view/js/aos.js"></script>
-    <script src="view/scripts/main.js"></script>
+    <script src="public/js/core/jquery.3.2.1.min.js"></script>
+    <script src="public/js/core/popper.min.js"></script>
+    <script src="public/js/core/bootstrap.min.js"></script>
+    <script src="public/js/now-ui-kit.js?v=1.1.0"></script>
+    <script src="public/js/aos.js"></script>
+    <script src="public/scripts/main.js"></script>
 </body>
 </html>

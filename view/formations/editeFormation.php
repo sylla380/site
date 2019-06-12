@@ -21,6 +21,9 @@
         <label for="ville">Ville :</label>
         <input type="text" name="ville" id="ville" value="<?= $contact->ville ?>"><br><br>
 
+        <label for="description">description :</label>
+        <input type="text" name="description" id="description" value="<?= $contact->description ?>"><br><br>
+
         <input type="submit" value="Edite">
 
     </form>

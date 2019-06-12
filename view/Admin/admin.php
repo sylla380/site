@@ -1,7 +1,5 @@
-<?php require_once('inc/adminHeader.inc.php');?>
+<?php require_once('../../inc/adminHeader.inc.php');?>
   
-
-
   <div id="content-wrapper">
 
     <div class="container-fluid">
@@ -70,4 +68,4 @@
 
   <!-- /.container-fluid -->
 
-<?php require_once('inc/adminFooter.inc.php');?>
+<?php require_once('../../inc/adminFooter.inc.php');?>
