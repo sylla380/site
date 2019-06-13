@@ -17,10 +17,10 @@
   <title>SB Admin - Login</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template-->
-  <link href="view/Admin/css/sb-admin.css" rel="stylesheet">
+  <link href="public/css/sb-admin.css" rel="stylesheet">
 
 </head>
 

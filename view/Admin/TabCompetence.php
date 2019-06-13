@@ -134,13 +134,8 @@
 </form>
 
 <?php endif ?>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
-
-        <p class="small text-center text-muted my-5">
-          <em>More table examples coming soon...</em>
-        </p>
 
       </div>
       <!-- /.container-fluid -->
-<?php require_once('inc/adminFooter.inc.php'); ?>
+<?php require_once('../../inc/adminFooter.inc.php'); ?>

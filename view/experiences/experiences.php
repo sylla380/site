@@ -11,7 +11,7 @@
                 <div class="card-body cc-experience-header">
                     <p><?php echo htmlentities($ex->date);?></p>
                     <div class="h5">
-                        <?php echo htmlentities($ex->nomEntreprise);?>
+                        <?php echo htmlentities($ex->nomEntreprise, ENT_SUBSTITUTE);?>
                     </div>
                 </div>
                 </div>
