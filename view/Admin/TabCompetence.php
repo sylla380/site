@@ -2,7 +2,7 @@
   require_once('../../inc/init.inc.php'); ob_start();
   require_once('../../inc/adminHeader.inc.php');
   
-  $r = execute_requete("SELECT * FROM competences"); 
+  $r = execute_requete("SELECT * FROM competence"); 
   // debug($r);
 ?>
 
@@ -22,7 +22,7 @@
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Table Example</div>
+            Competences</div>
           <div class="card-body">
             <div class="table-responsive">
               <button type="button" class="btn btn-success" ><a href="?op=new" style="color:white;">Ajouter competence</a></button><br>
@@ -35,7 +35,7 @@
 
                             if(isset($_GET['op']) && $_GET['op'] == 'delete'){ // si il y a une 'action' dans l'URL et que c'est égale à 'suppression'
 
-                              execute_requete("DELETE FROM competences WHERE id_competences='$_GET[id_competences]'");
+                              execute_requete("DELETE FROM competence WHERE id_competence='$_GET[id_competence]'");
 
                                header('location:TabCompetence.php');
 
@@ -60,14 +60,14 @@
                         <?php endforeach;?>
                           <td>
                             <button type="button" class="btn btn-success">
-                              <a href="?op=delete&id_competences=<?php echo $competences['id_competences']?>" style="color:white;">
+                              <a href="?op=delete&id_competence=<?php echo $competences['id_competence']?>" style="color:white;">
                                 Delete
                               </a>
                           </button>
                           </td>
                           <td>
                             <button type="button" class="btn btn-success">
-                              <a href="?op=update&id_competences=<?php echo $competences['id_competences']?>" style="color:white;">
+                              <a href="?op=update&id_competence=<?php echo $competences['id_competence']?>" style="color:white;">
                                     Edite
                               </a>
                             </button>
@@ -84,13 +84,13 @@
 
                   if(isset($_GET['op']) && $_GET['op'] == 'update') {
 
-                    execute_requete("UPDATE competences SET name='$_POST[name]',capacite='$_POST[capacite]' WHERE id_competences='$_GET[id_competences]'");
+                    execute_requete("UPDATE competence SET nom='$_POST[nom]',niveau='$_POST[niveau]',image='$_POST[image]' WHERE id_competence='$_GET[id_competence]'");
               
                     header('location:TabCompetence.php');
               
                   }else{
 
-                    execute_requete("INSERT INTO competences(name, capacite) VALUES('$_POST[name]','$_POST[capacite]')");
+                    execute_requete("INSERT INTO competence(nom, niveau, image) VALUES('$_POST[nom]','$_POST[niveau]','$_POST[image]')");
 
                     header('location:TabCompetence.php');
 
@@ -98,14 +98,14 @@
               }
 
               if( isset($_GET['op']) && $_GET['op'] == 'update'){
-                $r = execute_requete("SELECT * FROM competences WHERE id_competences='$_GET[id_competences]'");
+                $r = execute_requete("SELECT * FROM competence WHERE id_competence='$_GET[id_competence]'");
 
                 $competences =$r->fetch(PDO::FETCH_ASSOC);
               }
 
               
-              $name = (isset($competences['name'])) ? $competences['name'] :'';
-              $capacite = (isset($competences['capacite'])) ? $competences['capacite'] :'';
+              $name = (isset($competences['nom'])) ? $competences['nom'] :'';
+              $niveau = (isset($competences['niveau'])) ? $competences['niveau'] :'';
                 ?>
 
                 </tbody>
@@ -114,8 +114,8 @@
           </div>
           <?php if(isset($_GET['op']) && ($_GET['op'] == 'update' || $_GET['op'] == 'new' )) : 
             
-            if(isset($_GET['id_competences'])){ // si l'id_competences est présent dans l'URL
-              $r = execute_requete("SELECT * FROM competences WHERE id_competences='$_GET[id_competences]'");
+            if(isset($_GET['id_competence'])){ // si l'id_competence est présent dans l'URL
+              $r = execute_requete("SELECT * FROM competence WHERE id_competence='$_GET[id_competence]'");
       
               $competences_actuel = $r->fetch(PDO::FETCH_ASSOC);
               debug($competences_actuel);
@@ -123,13 +123,13 @@
             ?>
           <form method="post">
 
-    <label for="name">name</label><br>
-    <input type="text" name="name" id="name" class="form-control" value="<?=$name?>"><br><br>
+    <label for="nom">nom</label><br>
+    <input type="text" name="nom" id="nom" class="form-control" value="<?php echo $name?>"><br><br>
 
-     <label for="capacite">capacite</label><br>
-    <input type="text" name="capacite" id="capacite" class="form-control" value="<?=$capacite?>"><br><br>
+     <label for="niveau">niveau</label><br>
+    <input type="text" name="niveau" id="niveau" class="form-control" value="<?php echo $niveau?>"><br><br>
 
-    <input type="submit" class="btn btn-secondary" value="s'inscrire">
+    <input type="submit" class="btn btn-secondary" value="Ajouter competence">
 
 </form>
 

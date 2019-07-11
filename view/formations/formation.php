@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <link rel="stylesheet" href="view/css/style.css">
-</head>
-<body>
+<?php require_once('inc/header.inc.php'); ?>
+	<h1><?php echo $formation->formation; ?></h1>
 
-    <div>
-        <span>Formation :</span>
-        <?php echo $contact->nomFormation; ?>
-    </div>
-    <div>
-        <span>Date :</span>
-        <?php echo $contact->date; ?>
-    </div>
-    <div>
-        <span>Poste :</span>
-        <?php echo $contact->poste; ?>
-    </div>
-    <div>
-        <span>Ville :</span>
-        <?php echo $contact->ville; ?>
-    </div>
+	<div>
+		<span>formation :</span>
+		<?php echo $formation->formation; ?>
+	</div>
+	<div>
+		<span>description :</span>
+		<?php echo $formation->description; ?>
+	</div>
+	<div>
+		<span>lieu :</span>
+		<?php echo $formation->lieu; ?>
+	</div>
+	<div>
+		<span>date :</span>
+		<?php echo $formation->date_formation; ?>
+	</div>
+	
 
-    <div>
-        <span>Ville :</span>
-        <?php echo $contact->description; ?>
-    </div>
-    
+<hr><hr>
+
+		<?php foreach($formation as $indice => $valeur): ?>
+			<div><span><?= ucfirst($indice) ?></span> - <span><?= $valeur ?></span></div>
+		<?php endforeach; ?>
+
 </body>
 </html>

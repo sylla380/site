@@ -13,7 +13,7 @@ class CompetenceEntityRepository{
 
             try{
 
-                $xml = simplexml_load_file('app/config.xml');
+                $xml = simplexml_load_file('app/configCompetence.xml');
                 $this->table = $xml->table;
 
                 try{

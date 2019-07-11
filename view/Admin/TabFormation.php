@@ -21,10 +21,10 @@
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Table Example</div>
+            Formations</div>
           <div class="card-body">
             <div class="table-responsive">
-              <button type="button" class="btn btn-success" ><a href="?form=new" style="color:white;">Ajouter Experience</a></button><br>
+              <button type="button" class="btn btn-success" ><a href="?form=new" style="color:white;">Ajouter Formation</a></button><br>
             
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -81,13 +81,13 @@
 
                   if(isset($_GET['form']) && $_GET['form'] == 'update') {
 
-                    execute_requete("UPDATE formation SET nomFormation='$_POST[nomFormation]',date='$_POST[date]',poste='$_POST[poste]',ville='$_POST[ville]', description='$_POST[description]' WHERE id_formation='$_GET[id_formation]'");
+                    execute_requete("UPDATE formation SET formation='$_POST[formation]',description='$_POST[description]',lieu='$_POST[lieu]',date_formation='$_POST[date_formation]', description='$_POST[description]' WHERE id_formation='$_GET[id_formation]'");
               
                     header('location:TabFormation.php');
               
                   }else{
 
-                    execute_requete("INSERT INTO formation(nomFormation, date, poste, ville, description) VALUES('$_POST[nomFormation]','$_POST[date]','$_POST[poste]','$_POST[ville]','$_POST[description]')");
+                    execute_requete("INSERT INTO formation (formation, description, lieu, date_formation) VALUES('$_POST[formation]','$_POST[description]','$_POST[lieu]','$_POST[date_formation]')");
 
                     header('location:TabFormation.php');
 
@@ -101,10 +101,9 @@
               }
 
               
-              $nomFormation = (isset($formations['nomFormation'])) ? $formations['nomFormation'] :'';
-              $date = (isset($formations['date'])) ? $formations['date'] :'';
-              $poste = (isset($formations['poste'])) ? $formations['poste'] :'';
-              $ville = (isset($formations['ville'])) ? $formations['ville'] :'';
+              $formation = (isset($formations['formation'])) ? $formations['formation'] :'';
+              $lieu = (isset($formations['lieu'])) ? $formations['lieu'] :'';
+              $date_formation = (isset($formations['date_formation'])) ? $formations['date_formation'] :'';
               $description = (isset($formations['description'])) ? $formations['description'] :'';
                 ?>
 
@@ -123,22 +122,20 @@
             ?>
           <form method="post">
 
-    <label for="nomFormation">nomFormation</label><br>
-    <input type="text" name="nomFormation" id="nomFormation" class="form-control" value="<?=$nomFormation?>"><br><br>
-
-     <label for="date">date</label><br>
-    <input type="text" name="date" id="date" class="form-control" value="<?=$date?>"><br><br>
-
-    <label for="poste">poste</label><br>
-    <input type="text" name="poste" id="poste" class="form-control" value="<?=$poste?>"><br><br>
-
-    <label for="ville">ville</label><br>
-    <input type="text" name="ville" id="ville" class="form-control" value="<?=$ville?>"><br><br>
+    <label for="formation">formation</label><br>
+    <input type="text" name="formation" id="formation" class="form-control" value="<?=$formation?>"><br><br>
 
     <label for="description">description</label><br>
-    <input type="text" name="description" id="description" class="form-control" value="<?=$description?>"><br><br>
+    <textarea type="text" name="description" id="description" cols="30" rows="10" value="<?=$description?>"></textarea><br><br>
 
-    <input type="submit" class="btn btn-secondary" value="s'inscrire">
+    <label for="lieu">lieu</label><br>
+    <input type="text" name="lieu" id="lieu" class="form-control" value="<?=$lieu?>"><br><br>
+
+    <label for="date_formation">date_formation</label><br>
+    <input type="text" name="date_formation" id="date_formation" class="form-control" value="<?=$date_formation?>"><br><br>
+
+
+    <input type="submit" class="btn btn-secondary" value="ajouter">
 
 </form>
 

@@ -13,7 +13,7 @@ class FormationEntityRepository{
 
             try{
 
-                $xml = simplexml_load_file('app/config3.xml');
+                $xml = simplexml_load_file('app/config.xml');
                 $this->table = $xml->table;
 
                 try{

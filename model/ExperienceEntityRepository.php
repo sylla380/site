@@ -13,7 +13,7 @@ class ExperienceEntityRepository{
 
             try{
 
-                $xml = simplexml_load_file('app/config2.xml');
+                $xml = simplexml_load_file('app/configExperience.xml');
                 $this->table = $xml->table;
 
                 try{
